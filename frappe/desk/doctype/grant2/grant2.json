@@ -1,0 +1,389 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-08-10 10:56:24.059096",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "childs_information",
+  "case_number",
+  "childs_name",
+  "date_of_birth",
+  "childs_id",
+  "the_transfer_was_made_from_a_hospital",
+  "receipt_date",
+  "childs_picture",
+  "column_break_5",
+  "naming_series",
+  "file_number",
+  "child_nationality",
+  "treatment_period",
+  "contact_number",
+  "study_date",
+  "attachments_section",
+  "research_form",
+  "medical_report",
+  "column_break_15",
+  "proof_of_family_and_pictures_of_the_child",
+  "proof_of_indebtedness",
+  "health_status_section",
+  "aware_since",
+  "column_break_20",
+  "duration",
+  "column_break_22",
+  "type_of_treatment",
+  "social_status",
+  "nationality",
+  "family_count",
+  "residence",
+  "address",
+  "type_of_rent",
+  "rent_per_month",
+  "column_break_29",
+  "salary_per_month",
+  "citizen_benefit_amount",
+  "family_income",
+  "bank_name",
+  "debt_deductions_per_month",
+  "deductions_continue_until",
+  "column_break_38",
+  "income_after_deductions",
+  "number_of_appointments",
+  "frequency_of_appointments",
+  "mode_of_transport",
+  "item_name",
+  "amended_from",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "childs_information",
+   "fieldtype": "Section Break",
+   "label": "Childs Information"
+  },
+  {
+   "fieldname": "case_number",
+   "fieldtype": "Link",
+   "label": "case number",
+   "options": "Case Assessment",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "case_number.childs_name",
+   "fieldname": "childs_name",
+   "fieldtype": "Read Only",
+   "label": "Child\u2019s Full Name"
+  },
+  {
+   "fetch_from": "case_number.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Read Only",
+   "label": "Child\u2019s Date of Birth"
+  },
+  {
+   "fetch_from": "case_number.childs_id",
+   "fieldname": "childs_id",
+   "fieldtype": "Read Only",
+   "label": "Child's ID"
+  },
+  {
+   "fetch_from": "case_number.the_transfer_was_made_from_a_hospital",
+   "fieldname": "the_transfer_was_made_from_a_hospital",
+   "fieldtype": "Read Only",
+   "label": "The transfer was made from a hospital."
+  },
+  {
+   "fetch_from": "case_number.receipt_date",
+   "fieldname": "receipt_date",
+   "fieldtype": "Read Only",
+   "label": "Status Receipt Date"
+  },
+  {
+   "fetch_from": "case_number.childs_picture",
+   "fieldname": "childs_picture",
+   "fieldtype": "Attach Image",
+   "label": "Child's Picture"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "Grant-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "case_number.file_number",
+   "fieldname": "file_number",
+   "fieldtype": "Read Only",
+   "label": "Medical file number"
+  },
+  {
+   "fetch_from": "case_number.child_nationality",
+   "fieldname": "child_nationality",
+   "fieldtype": "Read Only",
+   "label": "Nationality/type of proof"
+  },
+  {
+   "fetch_from": "case_number.treatment_period",
+   "fieldname": "treatment_period",
+   "fieldtype": "Read Only",
+   "label": "Proposed Treatment Period"
+  },
+  {
+   "fetch_from": "case_number.contact_number",
+   "fieldname": "contact_number",
+   "fieldtype": "Read Only",
+   "label": "Contact Number"
+  },
+  {
+   "fetch_from": "case_number.study_date",
+   "fieldname": "study_date",
+   "fieldtype": "Read Only",
+   "label": "Case Study Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fetch_from": "case_number.research_form",
+   "fieldname": "research_form",
+   "fieldtype": "Read Only",
+   "label": "Social Research Form:"
+  },
+  {
+   "fetch_from": "case_number.medical_report",
+   "fieldname": "medical_report",
+   "fieldtype": "Read Only",
+   "label": "A new Arab Medical Report:"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "case_number.proof_of_family_and_pictures_of_the_child",
+   "fieldname": "proof_of_family_and_pictures_of_the_child",
+   "fieldtype": "Read Only",
+   "label": "Proof Of Family And Pictures Of The Child:"
+  },
+  {
+   "fetch_from": "case_number.proof_of_indebtedness",
+   "fieldname": "proof_of_indebtedness",
+   "fieldtype": "Read Only",
+   "label": "Proof Of Indebtedness:"
+  },
+  {
+   "fieldname": "health_status_section",
+   "fieldtype": "Section Break",
+   "label": "The health status of the case:"
+  },
+  {
+   "fetch_from": "case_number.aware_since",
+   "fieldname": "aware_since",
+   "fieldtype": "Read Only",
+   "label": "The child has been aware of the disease for:"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "case_number.duration",
+   "fieldname": "duration",
+   "fieldtype": "Read Only",
+   "label": "Duration",
+   "options": "Days\nWeeks\nMonths\nYears"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "case_number.type_of_treatment",
+   "fieldname": "type_of_treatment",
+   "fieldtype": "Read Only",
+   "label": "The child is currently receiving:",
+   "options": "No Treatment\nChemical\nRadiological\nSurgical Intervention"
+  },
+  {
+   "fieldname": "social_status",
+   "fieldtype": "Section Break",
+   "label": "The social status of the family:"
+  },
+  {
+   "fetch_from": "case_number.nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Read Only",
+   "label": "Nationality"
+  },
+  {
+   "fetch_from": "case_number.family_count",
+   "fieldname": "family_count",
+   "fieldtype": "Read Only",
+   "label": "Number Of Family Members:"
+  },
+  {
+   "fetch_from": "case_number.residence",
+   "fieldname": "residence",
+   "fieldtype": "Read Only",
+   "label": "Residence",
+   "options": "Apartment\nPopular House"
+  },
+  {
+   "fetch_from": "case_number.address",
+   "fieldname": "address",
+   "fieldtype": "Read Only",
+   "label": "Home Address"
+  },
+  {
+   "fetch_from": "case_number.type_of_rent",
+   "fieldname": "type_of_rent",
+   "fieldtype": "Read Only",
+   "label": "Type Of Rent",
+   "options": "Daily\nMonthly"
+  },
+  {
+   "fetch_from": "case_number.rent_per_month",
+   "fieldname": "rent_per_month",
+   "fieldtype": "Read Only",
+   "label": "Annual Rent Per Month:"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "case_number.salary_per_month",
+   "fieldname": "salary_per_month",
+   "fieldtype": "Read Only",
+   "label": "Salary Per Month"
+  },
+  {
+   "fetch_from": "case_number.citizen_benefit_amount",
+   "fieldname": "citizen_benefit_amount",
+   "fieldtype": "Read Only",
+   "label": "Citizen Benefit Amount"
+  },
+  {
+   "description": "(in case the mother has an income mentioned here)",
+   "fetch_from": "case_number.family_income",
+   "fieldname": "family_income",
+   "fieldtype": "Read Only",
+   "label": "Family Income"
+  },
+  {
+   "fetch_from": "case_number.bank_name",
+   "fieldname": "bank_name",
+   "fieldtype": "Read Only",
+   "label": "Bank Name"
+  },
+  {
+   "fetch_from": "case_number.debt_deductions_per_month",
+   "fieldname": "debt_deductions_per_month",
+   "fieldtype": "Read Only",
+   "label": "Debt Deductions Per Month"
+  },
+  {
+   "fetch_from": "case_number.deductions_continue_until",
+   "fieldname": "deductions_continue_until",
+   "fieldtype": "Read Only",
+   "label": "Deductions Continue Until"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "case_number.income_after_deductions",
+   "fieldname": "income_after_deductions",
+   "fieldtype": "Read Only",
+   "label": "Income After Deductions"
+  },
+  {
+   "fetch_from": "case_number.number_of_appointments",
+   "fieldname": "number_of_appointments",
+   "fieldtype": "Read Only",
+   "label": "Number Of Appointments"
+  },
+  {
+   "fetch_from": "case_number.frequency_of_appointments",
+   "fieldname": "frequency_of_appointments",
+   "fieldtype": "Read Only",
+   "label": "Frequency Of Appointments",
+   "options": "Weekly\nMonthly\nYearly"
+  },
+  {
+   "fetch_from": "case_number.mode_of_transport",
+   "fieldname": "mode_of_transport",
+   "fieldtype": "Read Only",
+   "label": "Mode Of Transport",
+   "options": "Private\nPublic"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "case_number.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grants",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant2",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-08-10 10:56:24.059096",
+ "modified_by": "Administrator",
+ "module": "Desk",
+ "name": "Grant2",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

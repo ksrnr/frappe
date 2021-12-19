@@ -3,6 +3,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "creation": "2014-03-11 14:55:00",
+ "default_email_template": "Welcome Email Template",
  "description": "Represents a User in the system.",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -670,7 +671,7 @@
   }
  ],
  "max_attachments": 5,
- "modified": "2021-02-02 16:11:06.037543",
+ "modified": "2021-12-15 09:53:09.125060",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",

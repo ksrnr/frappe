@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "creation": "2021-08-02 17:14:43.374046",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "break_1",
+  "emp_name",
+  "job_title",
+  "maintenance",
+  "transfer",
+  "col_break_1",
+  "date",
+  "end_date",
+  "break_2",
+  "item_code",
+  "main_details",
+  "col_break_2",
+  "priority_request",
+  "break_3",
+  "asset_name",
+  "transferred_from",
+  "transferred_to",
+  "data_18",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "emp_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0627\u0633\u0645 ",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0645\u0633\u0645\u0649 \u0627\u0644\u0648\u0638\u064a\u0641\u064a",
+   "options": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u062a\u0627\u0631\u064a\u062e",
+   "reqd": 1
+  },
+  {
+   "fieldname": "main_details",
+   "fieldtype": "Small Text",
+   "label": "\u0627\u0644\u0631\u062c\u0627\u0621 \u0639\u0645\u0644 \u0627\u0644\u0644\u0627\u0632\u0645 \u0646\u062d\u0648 \u0627\u0635\u0644\u0627\u062d \u0648\u0635\u064a\u0627\u0646\u0629 "
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "break_1",
+   "fieldtype": "Section Break",
+   "label": "\u0646\u0645\u0648\u0630\u062c \u0637\u0644\u0628 \u0635\u064a\u0627\u0646\u0629 / \u0646\u0642\u0644 \u0627\u062b\u0627\u062b"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "maintenance",
+   "fieldname": "break_2",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u0644\u0635\u064a\u0627\u0646\u0629"
+  },
+  {
+   "fieldname": "priority_request",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u0627\u0648\u0644\u0648\u064a\u0629",
+   "options": "\u0637\u0627\u0631\u0626\n\u0645\u062a\u0648\u0633\u0637\n\u0645\u0646\u062e\u0641\u0636",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0635\u064a\u0627\u0646\u0629",
+   "options": "Item"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "\u064a\u062c\u0628 \u0627\u0646\u0647\u0627\u0621 \u0627\u0644\u0639\u0645\u0644 \u0628\u0645\u062f\u0629 \u0627\u0642\u0635\u0627\u0647\u0627 ",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "transfer",
+   "fieldname": "break_3",
+   "fieldtype": "Section Break",
+   "label": "\u0646\u0642\u0644 \u0627\u0644\u0627\u062b\u0627\u062b"
+  },
+  {
+   "fieldname": "transferred_from",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0627\u062b\u0627\u062b \u0627\u0644\u062b\u0627\u0628\u062a "
+  },
+  {
+   "fieldname": "transferred_to",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u0646\u0642\u0648\u0644 \u0627\u0644\u064a\u0647"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "maintenance request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "maintenance",
+   "fieldtype": "Check",
+   "label": "\u0637\u0644\u0628 \u0635\u064a\u0627\u0646\u0629"
+  },
+  {
+   "default": "0",
+   "fieldname": "transfer",
+   "fieldtype": "Check",
+   "label": "\u0646\u0642\u0644 \u0623\u062b\u0627\u062b"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Link",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0642\u0637\u0639\u0629",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_18",
+   "fieldtype": "Data"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Asset",
+   "link_fieldname": "asset_name"
+  }
+ ],
+ "modified": "2021-08-03 18:21:15.734105",
+ "modified_by": "Administrator",
+ "module": "Desk",
+ "name": "maintenance request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
