@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
+ "allow_rename": 1,
  "creation": "2013-01-10 16:34:01",
  "description": "Adds a custom client script to a DocType",
  "doctype": "DocType",
@@ -59,7 +60,7 @@
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-03-16 20:33:51.400191",
+ "modified": "2022-02-17 09:45:25.744743",
  "modified_by": "Administrator",
  "module": "Custom",
  "name": "Client Script",
