@@ -111,6 +111,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "user",
  "track_changes": 1
 }
