@@ -8,8 +8,8 @@
  "field_order": [
   "user",
   "allow",
-  "column_break_3",
   "for_value",
+  "column_break_3",
   "is_default",
   "advanced_control_section",
   "apply_to_all_doctypes",
@@ -36,10 +36,6 @@
    "label": "Allow",
    "options": "DocType",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "for_value",
