@@ -752,7 +752,7 @@ body {
 		.layout-main {
 			height: calc(100vh - var(--navbar-height) - var(--page-head-height) - 5px);
 			.layout-side-section, .layout-main-section-wrapper {
-				height: 136%;
+				height: 100%;
 				overflow-y: auto;
 				padding-right: 25px;
 				scrollbar-color: var(--gray-200) transparent;

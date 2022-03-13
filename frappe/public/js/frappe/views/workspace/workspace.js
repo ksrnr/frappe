@@ -57,6 +57,7 @@ frappe.views.Workspace = class Workspace {
 			</div>
 		`).appendTo(this.wrapper.find(".layout-side-section"));
 		this.sidebar = list_sidebar.find(".desk-sidebar");
+
 		this.body = this.wrapper.find(".layout-main-section");
 	}
 
@@ -78,8 +79,6 @@ frappe.views.Workspace = class Workspace {
 	}
 
 	make_sidebar() {
-		$(`<div class="sidebar-label-img"></div>`)
-		.appendTo(this.sidebar);
 		this.sidebar_categories.forEach(category => {
 			if (this.workspaces[category]) {
 				this.build_sidebar_section(category, this.workspaces[category]);
@@ -89,6 +88,7 @@ frappe.views.Workspace = class Workspace {
 
 	build_sidebar_section(title, items) {
 		let sidebar_section = $(`<div class="standard-sidebar-section"></div>`);
+
 		// DO NOT REMOVE: Comment to load translation
 		// __("Modules") __("Domains") __("Places") __("Administration")
 		$(`<div class="standard-sidebar-label">${__(title)}</div>`)
@@ -119,6 +119,7 @@ frappe.views.Workspace = class Workspace {
 		};
 
 		items.forEach(item => make_sidebar_category_item(item));
+
 		sidebar_section.appendTo(this.sidebar);
 	}
 
