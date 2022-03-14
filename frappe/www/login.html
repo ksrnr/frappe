@@ -1,14 +1,8 @@
 {% extends "templates/web.html" %}
 
 {% macro email_login_body() -%}
-<style>
-.page-card{
-	height: 400px;
-}
-
-</style>
-<div class="page-card-body p-5 ">
-	<div class="form-group ">
+<div class="page-card-body">
+	<div class="form-group">
 		<label class="form-label sr-only" for="login_email">{{ login_label or _("Email")}}</label>
 		<div class="email-field">
 			<input type="text" id="login_email" class="form-control"
@@ -65,8 +59,7 @@
 {% macro logo_section() %}
 <div class="page-card-head">
 	<img class="app-logo" src="{{ logo }}">
-	<h4>Login to KSRNR</h4>
-	<!-- <h4>{{ _('Login to {0}').format(app_name or _("Frappe")) }}</h4> -->
+	<h4>{{ _('Login to {0}').format(app_name or _("Frappe")) }}</h4>
 </div>
 {% endmacro %}
 
@@ -81,7 +74,6 @@
 		</div>
 	</noscript>
 	<section class='for-login'>
-		
 		<div class="login-content page-card">
 			{{ logo_section() }}
 			<form class="form-signin form-login" role="form">
@@ -117,8 +109,6 @@
 			<a href="#signup">{{ _("Sign up") }}</a>
 		</div>
 		{%- endif -%}
-	
-		
 	</section>
 
 	{%- if social_login -%}
@@ -164,11 +154,11 @@
 				</div>
 			</form>
 			{%- else -%}
-			<div class='page-card-head'>
+			<div class='page-card-head mb-2'>
 				<span class='indicator gray'>{{_("Signup Disabled")}}</span>
+				<p class="text-muted text-normal sign-up-message mt-1 mb-8">{{_("Signups have been disabled for this website.")}}</p>
+				<div><a href='/' class='btn btn-primary btn-md'>{{ _("Home") }}</a></div>
 			</div>
-			<p>{{_("Signups have been disabled for this website.")}}</p>
-			<div><a href='/' class='btn btn-primary btn-sm'>{{ _("Home") }}</a></div>
 			{%- endif -%}
 		</div>
 

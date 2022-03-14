@@ -2,27 +2,9 @@
 {% block hero %}{% endblock %}
 
 {% block content %}
-<style>
-	.bg{
 
-/* background-color: #5E7461; */
-/* background-color: #D1CCBD; */
-background-image: url("/assets/erpnext/images/green-big.png");
-/* background-image: url("/assets/erpnext/images/sidebar.svg");  */
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-min-height: 100vh;
-/* padding-inline-start: 1rem; */
-padding-top: 2rem;
-	}
-</style>
 {% macro main_content() %}
-<div class="row bg">
-	<div class="col-4 p-5">
-		<!-- <img src="/assets/erpnext/images/sidebar.svg" alt=""> -->
-	</div>
-<div class="col-8 page-content-wrapper">
+<div class="page-content-wrapper">
 	<!-- breadcrumbs -->
 	<div class="page-breadcrumbs">
 		{% block breadcrumbs %}
@@ -53,7 +35,6 @@ padding-top: 2rem;
 		</div>
 	</main>
 	{% endblock %}
-</div>
 </div>
 {% endmacro %}
 
